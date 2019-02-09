@@ -1,0 +1,11 @@
+.bookdisplay {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center
+}
+.bookimg{
+    margin-bottom: 5px;
+}
+.book {
+    margin-bottom: 20px;
+}
