@@ -5,22 +5,12 @@ function SearchForm(props) {
   return (
     <form className="search">
       <div className="form-group">
-        <label htmlFor="breed">Book Title:</label>
-        <input
-          value={props.search}
-          onChange={props.handleInputChange}
-          name="search"
-          type="text"
-          className="form-control"
-          placeholder="The Great Gatsby"
-          id="searchTerm"
-        />
-        <br></br>
-        <button type="submit" onClick={props.handleFormSubmit} className="btn btn-success">
-         Search
-        </button>
-      </div>
+    <label>Search</label>
+    <input type="text" className="form-control" id="searchTerm" value={props.search} onChange={props.handleInputChange} name="search" placeholder="ex.Harry Potter"></input>
+  </div>
+  <button onClick={props.handleFormSubmit} type="submit" className="btn btn-primary">Submit</button>
     </form>
+    
   );
 }
 

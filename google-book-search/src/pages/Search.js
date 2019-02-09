@@ -25,7 +25,7 @@ class Search extends Component {
                     if (res.data.status === "error") {
                         throw new Error(res.data.message);
                     }
-                    console.log(res.data.items[1])
+                    
                     const array = res.data.items.map((res, index) => ({
                         id: index,
                         title: res.volumeInfo.title,
@@ -34,9 +34,9 @@ class Search extends Component {
                         image: res.volumeInfo.imageLinks.thumbnail,
                         link: res.volumeInfo.canonicalVolumeLink
                     }))
-                    console.log(array)
+                    
                     this.setState({ books: array });
-                    console.log(this.state.books)
+                    
                 })
 
 
@@ -44,6 +44,9 @@ class Search extends Component {
 
     };
 
+    saveBook = index => {
+        console.log(index)
+    }
 
 
 
@@ -57,11 +60,13 @@ class Search extends Component {
                     <div>
                     {this.state.books.map((book, index) => (                
                     <Results
+                        key={index}
                         title={book.title}
                         authors={book.authors}
                         decription={book.description}
                         image={book.image}
                         link={book.link}
+                        saveBook={() => this.saveBook(index)}
 
                     />))}
                     </div>
