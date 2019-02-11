@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import axios from "axios"
 import SearchForm from "../components/SearchForm/SearchForm"
 import Results from "../components/Results/Results"
+import API from "../utils/API"
 
 class Search extends Component {
     state = {
@@ -45,7 +46,18 @@ class Search extends Component {
     };
 
     saveBook = index => {
-        console.log(index)
+        const book = this.state.books[index]
+        console.log(book)
+   
+        API.saveBook({
+            title: book.title,
+            authors: book.authors,
+            description: book.description,
+            image: book.image,
+            link: book.link
+        })
+            .then(res => console.log(res))
+            .catch(err => console.log(err));
     }
 
 
