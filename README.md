@@ -12,10 +12,10 @@ https://tranquil-atoll-34455.herokuapp.com/
 
 Searched
 
-![Alt text](/public/images/Screenshot63.png?raw=true "Title")
+![Alt text](/client/public/images/Screenshot63.png?raw=true "Title")
 
 
 
 Saved
 
-![Alt text](/public/images/Screenshot64.png?raw=true "Title")
+![Alt text](/client/public/images/Screenshot64.png?raw=true "Title")
