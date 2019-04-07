@@ -10,7 +10,7 @@ Installation
 -----------------
 
 - Open your command prompt or git bash terminal and run mongod
-- Run "yarn install" from the Travel-App folder
+- Run "yarn install" 
 - Run "yarn start"
 
 
